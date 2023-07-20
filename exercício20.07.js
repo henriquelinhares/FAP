@@ -14,9 +14,10 @@ console.log(igual);
 var menorOu = minhaVar <= soma;
 console.log(menorOu);
 
-function divisao(10, 5){
-    return 
+function divisao(numero10, numero2){
+    return numero10 / numero2;
 }
+console.log(divisao);
 
 
 
