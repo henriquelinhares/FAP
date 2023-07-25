@@ -64,4 +64,5 @@ let pedais;
     
     
     console.log(`Obrigado por responder nossa pesquisa, ${nome}. Até logo.`);
+    
    
