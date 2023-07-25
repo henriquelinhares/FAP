@@ -50,10 +50,16 @@ let pesado;
         console.log("Resposta incorreta.");
     } 
 
-let biccleta;
-    bicicleta = entrada.question("Seu veiculo usa pedal? ")
+let pedais;
+    pedais = entrada.question("Seu veiculo usa pedal? ")
 
-    if
+    if(pedais == "sim" || pedais == "Sim"){
+        console.log(`Certo, ${nome}. Seu veiculo é uma bicicleta.`);
+    } else if(pedais == "não" || pedais == "Não"){
+        console.log(`Desconhecemos o seu veiculo, ${nome}.`);
+    } else{
+        console.log("Resposta incorreta.");
+    }
 
     
     
