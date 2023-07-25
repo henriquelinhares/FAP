@@ -62,6 +62,7 @@ let estadoCivil;
 
         case ""
         }
+        
     
 
 
@@ -80,4 +81,3 @@ let estadoCivil;
 
 
 
-        
