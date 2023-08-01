@@ -36,10 +36,14 @@ console.log(numeros.indexOf());
 
 const numerosDois = [1, 2, 3, 4, 5]; 
 const numerosTreis = [1, 2, 3, 4, 5]; 
-const numerosConcatenados = numerosDois.concat(numerosTreis); 
+const numerosConcatenados = [numerosDois.concat(numerosTreis)]; 
 
 console.log(numerosConcatenados);
 
 
+const numerosQuatro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+const numerosPares = []; 
+
+console.log(numerosPares);
 
 
