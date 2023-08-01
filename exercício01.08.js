@@ -42,8 +42,14 @@ console.log(numerosConcatenados);
 
 
 const numerosQuatro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
-const numerosPares = []; 
+function buscarNumerosPares (value) {
+    if (value % 2 == 0) 
+    return value;
+}
+var numerosPares = numerosQuatro.filter(buscarNumerosPares);
 
 console.log(numerosPares);
 
+
+/* https://blog.betrybe.com/javascript/javascript-filter/ */ 
 
