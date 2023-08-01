@@ -34,6 +34,12 @@ if(numero > -1){
 
 console.log(numeros.indexOf());
 
+const numerosDois = [1, 2, 3, 4, 5]; 
+const numerosTreis = [1, 2, 3, 4, 5]; 
+const numerosConcatenados = numerosDois.concat(numerosTreis); 
+
+console.log(numerosConcatenados);
+
 
 
 
