@@ -25,5 +25,15 @@ console.log(frutas);
 
 
 const numeros = [10, 20, 30, 40, 50]; 
+var numero = numeros.indexOf(25);
+if(numero > -1){
+    console.log("Este número já pode existir na lista");
+} else {
+    console.log("Este número não existe na lista.");
+}
 
-console.log(numeros.indexOf(25)); 
+console.log(numeros.indexOf());
+
+
+
+
