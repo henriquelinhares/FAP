@@ -34,7 +34,7 @@ while (contador <= 50) {  //Foi necessario fazer um if para poder efetuar a oper
 let contador = entrada.question("Digite um número para ser multiplicado por 2: ")
 
 
-while (contador <= 1000) {
+while (contador < 1000) {
     console.log(contador = contador * 2);
        
 }
