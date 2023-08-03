@@ -65,6 +65,23 @@ console.log(ordemCrescente);
 
 const frutas2 = ["maçã", "banana", "laranja", "uva", "manga"];
  
-console.log(frutas2.indexOf("laranja"));
+console.log(frutas2.indexOf("laranja")); 
+
+
+
+const frutinhas = ["maçã", "banana", "laranja"]; 
+
+let num = frutinhas; 
+
+function testandoArray(x){
+    let testeArray = Array.isArray(x);
+    testandoArray(frutinhas);
+    
+    if(Array == true){
+        console.log("É um array.");
+    } else {
+        console.log("Não é um array.");
+    }
+}
 
 
