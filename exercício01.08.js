@@ -41,6 +41,8 @@ const numerosConcatenados = [numerosDois.concat(numerosTreis)];
 console.log(numerosConcatenados);
 
 
+
+
 const numerosQuatro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
 function buscarNumerosPares (value) {
     if (value % 2 == 0) 

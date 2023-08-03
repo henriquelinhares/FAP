@@ -10,6 +10,14 @@ while (tabuada < 11) {
     tabuada++
 }
 
+let nota = entrada.question("Digite a primeira nota do aluno: ");
+let nota2 = entrada.question("Digite a segunda nota do aluno: "); 
+let media = (Number(nota) + Number(nota2)) / 2; 
 
+if(media >= 7){
+    console.log(`A nota final do aluno foi ${media}. O aluno foi aprovado.`);
+}else{
+    console.log(`A nota final do aluno foi ${media}. O aluno foi reprovado.`);
+}
 
 
