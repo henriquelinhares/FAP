@@ -37,6 +37,7 @@ let soma2;
 
     console.log(`A soma das suas cartas foi: ${soma}.`);
     console.log(`A soma das cartas do banco foi: ${soma2}.`);
+    
 
 
     
