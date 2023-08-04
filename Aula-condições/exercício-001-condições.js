@@ -12,3 +12,11 @@ if (velocidade > 60) { //Quando se utiliza apenas o if, temos uma condição sim
 } else{// Utilizando if e else, temos uma condição composta. 
     console.log(`A velocidade do seu carro é ${velocidade}km/h. Dirija com cuidado!`);
 }
+
+var pais = "Brasil";
+console.log(`Vivendo em ${pais}.`);
+if (pais == "Brasil" || pais == "brasil") {
+    console.log("Você é brasileiro.");
+}else{
+    console.log("Você é estrangeiro.");
+}
