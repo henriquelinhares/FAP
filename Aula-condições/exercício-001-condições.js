@@ -6,6 +6,8 @@ As condições com apenas um tipo de bloco, é chamada de condição simples.
 Ja a condição com dois tipos de blocos, são chamadas de condição composta.
 */
 
+//Condições if e else
+
 const entrada= require('readline-sync');
 
 
@@ -49,4 +51,25 @@ if (string.length === 0) { //Para verificar uma string vazia usei o .length que 
     console.log("String vazia.");
 } else{
     console.log(`A string digitada foi ${string}.`);
+}
+
+//Verificando se um número é mais que 10
+
+var numero = entrada.question("Digite um número: ");
+if (numero <= 10) {
+    console.log(`O número ${numero} não é maior que 10.`);
+} else{
+    console.log(`O número ${numero} é maior que 10.`);
+}
+
+//Verificando se uma váriavel é do tipo boolean
+
+var comida = "Bolacha";
+var lanche = "Bolacha";
+var bebida = "Suco";
+var bebida2 = "Refrigerante"
+if (comida == lanche && bebida == bebida2) {
+    console.log(true);
+} else {
+    console.log(false);
 }
