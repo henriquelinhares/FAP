@@ -6,7 +6,7 @@ As condições com apenas um tipo de bloco, é chamada de condição simples.
 Ja a condição com dois tipos de blocos, são chamadas de condição composta.
 */
 
-//Condições if e else
+//Condições if, else e else if
 
 const entrada= require('readline-sync');
 
@@ -72,4 +72,41 @@ if (comida == lanche && bebida == bebida2) {
     console.log(true);
 } else {
     console.log(false);
+}
+
+//Classificando um número em três categorias
+
+var categorias = entrada.question("Digite um número: ")
+if (categorias < 0) {
+    console.log("Este número é negativo.");
+} else if(categorias = 0){
+    console.log("Este número é neutro.");
+} else {
+    console.log("Este número é positivo.");
+}
+
+//Verificando se um número é divisel por 2, 3 ou 5
+
+var divisivel = entrada.question("Digite algum número: ")
+
+if (divisivel % 2 == 0) {
+    console.log("Este número é divisivel por 2.");  //REVER ESSA QUESTÃO criar função???
+} else if(divisivel % 3 == 0){
+    console.log("Este número é divisivel por 3.");
+} else if (divisivel % 5 == 0) {
+    console.log("Este número é divisivel por 5.");
+}
+
+//Verificando se variavel é boolean, numerica, string ou indefinida
+
+var clas = entrada.question("Digite alguma coisa: "); 
+
+if (typeof clas === "string") {
+    console.log("Esta variavel é uma string.");
+} else if(typeof clas === "number"){ //Lembrar que === checar o tipo de dado
+    console.log("Esta variavel é numerica.");
+} else if(typeof cla === "true" || typeof clas === "false"){
+    console.log("Está variavel é booleana.");
+} else{
+    console.log("Variavel indefinida.");
 }
