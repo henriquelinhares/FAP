@@ -10,7 +10,7 @@ Ja a condição com dois tipos de blocos, são chamadas de condição composta.
 
 const entrada= require('readline-sync');
 
-
+/*
 var velocidade = 65;
 if (velocidade > 60) { //Quando se utiliza apenas o if, temos uma condição simples.
     console.log(`A velocidade do seu carro é ${velocidade}km/h. Multado!`);
@@ -95,18 +95,18 @@ if (divisivel % 2 == 0) {
     console.log("Este número é divisivel por 3.");
 } else if (divisivel % 5 == 0) {
     console.log("Este número é divisivel por 5.");
-}
+}    */
 
 //Verificando se variavel é boolean, numerica, string ou indefinida
 
-var clas = entrada.question("Digite alguma coisa: "); 
+var clas = entrada.question("Digite alguma coisa: ");
 
-if (typeof clas === "string") {
-    console.log("Esta variavel é uma string.");
-} else if(typeof clas === "number"){ //Lembrar que === checar o tipo de dado
-    console.log("Esta variavel é numerica.");
-} else if(typeof cla === "true" || typeof clas === "false"){
-    console.log("Está variavel é booleana.");
-} else{
-    console.log("Variavel indefinida.");
+if (clas == Number(clas)) {
+    console.log("Numero");
+} else if(clas == String(clas)){
+    console.log("String");
+} else if(clas === "true" || clas === "false"){ // continuar esse exercício. Parado em boolean.
+    console.log("Boolean.");
+}else {
+    console.log("Indefinido.");
 }
