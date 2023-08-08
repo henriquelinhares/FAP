@@ -1,8 +1,11 @@
 // Aula condições. Segunda parte. 
 
 /* Condição multipla. Essa condição é fundamental quando se tem valores fixos. 
-    switch.
-Temos o comando switch(expressão){}. 
+   O switch é muito importate para se testar valores pontuais, não intervalos. Ele funciona com números
+   inteiros e com strings. Switch é mais limitado, mas muito util em situações pontuais.  
+   Se precisar testar intervalos o melhor é utilizar o if else.
+
+   Temos o comando switch(expressão){}. 
 */
 
 //Exemplo 
