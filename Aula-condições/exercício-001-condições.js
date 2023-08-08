@@ -83,30 +83,33 @@ if (categorias < 0) {
     console.log("Este número é neutro.");
 } else {
     console.log("Este número é positivo.");
-}
+} */
 
 //Verificando se um número é divisel por 2, 3 ou 5
 
 var divisivel = entrada.question("Digite algum número: ")
 
-if (divisivel % 2 == 0) {
-    console.log("Este número é divisivel por 2.");  //REVER ESSA QUESTÃO criar função???
-} else if(divisivel % 3 == 0){
-    console.log("Este número é divisivel por 3.");
-} else if (divisivel % 5 == 0) {
-    console.log("Este número é divisivel por 5.");
-}    */
+if (divisivel % 2 === 0) {
+    console.log("O número é divisivel por 2.");
+} else if(divisivel % 3 === 0){
+    console.log("Numero divisivel por 3.");
+} else if(divisivel % 5 === 0){
+    console.log("Este numero é sivisivel por 5.");
+} else {
+    console.log("Erro.");
+}
 
 //Verificando se variavel é boolean, numerica, string ou indefinida
 
-var clas = entrada.question("Digite alguma coisa: ");
+/*var clas = entrada.question("Digite alguma coisa: ");
 
 if (clas == Number(clas)) {
     console.log("Numero");
 } else if(clas == String(clas)){
     console.log("String");
-} else if(clas === "true" || clas === "false"){ // continuar esse exercício. Parado em boolean.
+} else if(typeof clas == true|| typeof clas == false){ // continuar esse exercício. Parado em boolean.
     console.log("Boolean.");
 }else {
     console.log("Indefinido.");
-}
+} */
+
