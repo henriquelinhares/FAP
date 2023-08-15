@@ -67,8 +67,8 @@ function calcularImc(peso, altura) {
     }
 }
 
-let peso = Number.toFixed(2).replace(',', '.')(entrada.question('Digite o seu peso: '));
-let altura = Number.toFixed(2).replace(',', '.')(entrada.question('Digite a sua altura: ')); 
+let peso = Number(entrada.question('Digite o seu peso: ').replace(',', '.'));
+let altura = Number(entrada.question('Digite a sua altura: ').replace(',', '.')); 
 
-console.log(calcularImc(peso, altura));
+console.log(calcularImc(peso, altura)); 
 
