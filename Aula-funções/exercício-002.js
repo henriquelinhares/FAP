@@ -49,29 +49,26 @@ console.log(maiorNumero(numero1, numero2, numero3));     */
 //Função para realizar o calculo de IMC 
 
 function calcularImc(peso, altura) {
-    if (peso / altura**2 < 16,99) {
+
+    if (peso / altura**2 < 16.99) {
         return "Você está muito abaixo do peso"
-    } else if(peso / altura**2 == 17 || peso / altura**2 <= 18,49){
+    } else if(peso / altura**2 == 17 || peso / altura**2 <= 18.49){
         return "Você está abaixo do peso"
-    } else if(peso / altura**2 == 18,50 || peso / altura**2 <= 24,99){
+    } else if(peso / altura**2 == 18.50 || peso / altura**2 <= 24.99){
         return "Você está com o peso normal."
-    } else if(peso / altura**2 == 25 || peso / altura**2 <= 29,99){
+    } else if(peso / altura**2 == 25 || peso / altura**2 <= 29.99){
         return "Você está acima do peso."
-    } else if(peso / altura**2 == 30 || peso / altura**2 <= 34,99){
+    } else if(peso / altura**2 == 30 || peso / altura**2 <= 34.99){
         return "Você está no primeiro nivel de obesidade. Cuidado!"
-    } else if(peso / altura**2 == 35 || peso / altura**2 <= 39,99){
+    } else if(peso / altura**2 == 35 || peso / altura**2 <= 39.99){
         return "Você está no segundo nivel de obesidade. Cuidado redobrado!"
     } else {
         return "Você está no terceiro nivel de obesidade. Procure ajuda!"
     }
 }
 
-let peso = Number(entrada.question('Digite o seu peso: '));
-let altura = Number(entrada.question('Digite a sua altura: ')); 
+let peso = Number.toFixed(2).replace(',', '.')(entrada.question('Digite o seu peso: '));
+let altura = Number.toFixed(2).replace(',', '.')(entrada.question('Digite a sua altura: ')); 
 
 console.log(calcularImc(peso, altura));
 
-let pes = 78; 
-let alt = 1.70; 
-let ress = pes / alt**2; 
-//console.log(ress);
