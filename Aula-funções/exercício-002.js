@@ -5,7 +5,7 @@ const entrada = require('readline-sync');
 
 //Criando uma função para somar. 
 
-function soma(n1, n2) {
+/* function soma(n1, n2) {
     return n1 + n2
 }
 let n1 = Number(entrada.question('Digite um número: '));
@@ -44,4 +44,24 @@ let numero1 = entrada.question("Digite algum número: ");
 let numero2 = entrada.question('Digite outro número: ');
 let numero3 = entrada.question('Digite um terceiro número: ');
 
-console.log(maiorNumero(numero1, numero2, numero3));
+console.log(maiorNumero(numero1, numero2, numero3));     */
+ 
+//Função para realizar o calculo de IMC 
+
+function calcularImc(peso, altura) {
+    if (peso / altura**2 < 17) {
+        return "Você está muito abaixo do peso"
+    } else if(peso / altura**2 <= 18,49){
+        return "Você está abaixo do peso"
+    } else if(peso / altura**2 == 18,50 || peso / altura**2 <= 24,99){
+        return "Você está com o peso normal."
+    } else if(peso / altura**2 == 25 || peso / altura**2 <= 29,99){
+        return "Você está acima do peso."
+    } else if(peso / altura**2 == 30 || peso / altura**2 <= 34,99){
+        return "Você está no primeiro nivel de obesidade. Cuidado!"
+    } else if(peso / altura**2 == 35 || peso / altura**2 <= 39,99){
+        return "Você está no segundo nivel de obesidade. Cuidado redobrado!"
+    } else {
+        return "Você está no terceiro nivel de obesidade. Procure ajuda!"
+    }
+}
