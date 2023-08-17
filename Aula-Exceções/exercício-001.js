@@ -15,18 +15,27 @@ Palavras chave: Try, Catch, Finally.
 
 // Sintaxe das exceções: 
 
-    try {
+// Programa que recebe numero e tenta dividir por 0
 
-    } catch(error){
+try{
+    let numero = Number(entrada.question('Digite um núemro: '))
+    if(numero === 0){
+        throw ('Erro. Divisão por zero.')
+    } 
+    let divisao = numero / 5;
+    console.log(`O valor da divisão de ${numero} por 5 é: ${divisao}`);
+} catch(erro){
+    console.log("Digite um número diferente de zero.");
+}
 
-    } finally{
-        
+// Programa que recebe string não númerica em número
+
+try {
+    let strin = Number(entrada.question('Digite um número: '))
+    if (isNaN(strin) ) {
+        throw ('Erro. string e não número.')
     }
-
-
-
-
-Exemplo: 
-    throw 'minha-excecao'; // saída: Uncaught 'minha excecao'
-    throw true; // saída: Uncaught true
-    throw 42; // saída: Uncaught 42
+    console.log(`O número digitado foi: ${strin}`);
+} catch (erro){
+    console.log("Digite um número válido.");
+}
