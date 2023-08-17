@@ -17,7 +17,7 @@ Palavras chave: Try, Catch, Finally.
 
 // Programa que recebe numero e tenta dividir por 0
 
-try{
+/* try{
     let numero = Number(entrada.question('Digite um núemro: '))
     if(numero === 0){
         throw ('Erro. Divisão por zero.')
@@ -32,12 +32,26 @@ try{
 
 try {
     let strin = Number(entrada.question('Digite um número: '))
-    if (isNaN(strin) )//Necessário usar o isNaN. Estudar isso. {
+    if (isNaN(strin)){ //Necessário usar o isNaN. Estudar isso.
         throw ('Erro. string e não número.')
     }
     console.log(`O número digitado foi: ${strin}`);
 } catch (erro){
-    console.log("Digite um número válido.");
-}
+    console.log("Digite um número válido."); 
+} */
 
 // Programa para acessar propriedade inexistente de um objeto
+
+try {
+    let objetoo = entrada.question('O que deseja acessar? ')
+    const aluno = new Object()
+    aluno.aluno = "Luiz"; 
+    aluno.idade = 29; 
+    aluno.escolaridade = "Superior em Biologia.";
+    if (objetoo != objet) {
+        throw('Erro! Objeto inválido.')
+    }
+    console.log(objetoo);
+} catch (erro) {
+    console.log("Objeto inexistete.");
+}
