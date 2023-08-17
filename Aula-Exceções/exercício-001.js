@@ -32,10 +32,12 @@ try{
 
 try {
     let strin = Number(entrada.question('Digite um número: '))
-    if (isNaN(strin) ) {
+    if (isNaN(strin) )//Necessário usar o isNaN. Estudar isso. {
         throw ('Erro. string e não número.')
     }
     console.log(`O número digitado foi: ${strin}`);
 } catch (erro){
     console.log("Digite um número válido.");
 }
+
+// Programa para acessar propriedade inexistente de um objeto
