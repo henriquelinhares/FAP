@@ -43,11 +43,10 @@ try {
 // Programa para acessar propriedade inexistente de um objeto
 
 try {
-    let objetoo = entrada.question('O que deseja acessar? ')
-    const aluno = new Object();
-    aluno.nome = "Luiz"; 
-    aluno.idade = 29; 
-    aluno.escolaridade = "Superior em Biologia."
+    const aluno = entrada.question('O que deseja acessar? ') 
+    {
+        nome: "Luiz", idade: 29, escolaridade: "Superior em Biologia."
+    }
     if (objetoo != aluno) {
         throw('Erro! Objeto inválido.')
     }
