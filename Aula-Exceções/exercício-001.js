@@ -44,14 +44,14 @@ try {
 
 try {
     let objetoo = entrada.question('O que deseja acessar? ')
-    const aluno = new Object()
-    aluno.aluno = "Luiz"; 
+    const aluno = new Object();
+    aluno.nome = "Luiz"; 
     aluno.idade = 29; 
-    aluno.escolaridade = "Superior em Biologia.";
-    if (objetoo != objet) {
+    aluno.escolaridade = "Superior em Biologia."
+    if (objetoo != aluno) {
         throw('Erro! Objeto inválido.')
     }
-    console.log(objetoo);
+    console.log(aluno);
 } catch (erro) {
     console.log("Objeto inexistete.");
 }
