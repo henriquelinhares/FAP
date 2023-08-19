@@ -14,7 +14,7 @@ const entrada = require('readline-sync');
 
 //Exemplo while: 
 let i = entrada.question('Digite um número: ')
-/*Abaixo temos a estrutura de montagem do while. Chamamos o while e entre parenteses colocamos a condição. Dentro do bloco imprimimos o
+/*Abaixo temos a sintaxe do while. Chamamos o while e entre parenteses colocamos a condição. Dentro do bloco imprimimos o
 que desejamos que seja feito com a váriavel recebida, no caso a váriavel i. */
 while(i < 11){ 
     console.log('5 x ' + i + ' = ' + 5*i);
@@ -23,8 +23,9 @@ while(i < 11){
 
 //Exemplo do-while: 
 let contador = 0;
-
+//Abaixo temos a sintaxe do do-while. 
 do{
 	console.log("O contador vale: " + contador);
 	contador++;
 }while(contador == 1)
+
