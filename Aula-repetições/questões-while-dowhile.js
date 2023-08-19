@@ -11,6 +11,6 @@ while (n <= 5) {
 //Criando o vetor e acessando as informações 
 
 let nota = entrada.question('Digite uma nota entre 0 e 10: ');
-while (nota > 10) {
-    console.log('Valor inválido. Digite novamente.');
-}
+   
+
+    
