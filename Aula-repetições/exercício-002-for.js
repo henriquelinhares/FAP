@@ -27,6 +27,8 @@ for(let i = 0; i < 11; i++){
    No JavaScript, nós temos mais duas variações da utilização do for, o for…in e for…of.
 
    O for…in é utilizado para percorrer as propriedades de um objeto, por exemplo:
+*/
+
    let carro = {
    marca: 'ford',
    modelo: 'fiesta',
@@ -34,6 +36,13 @@ for(let i = 0; i < 11; i++){
    }
 
    for (propriedade in carro) {
-    console.log(propriedade);
+    console.log(propriedade); //Será impresso apenas as propriedades do objeto carro. 
    }
-*/
+   for (propriedade in carro) {
+      console.log(carro[propriedade]);//Será impresso as "caracteristicas" de cada propriedade do objeto carro.
+     }
+   for (propriedade in carro) {
+      console.log(propriedade + ' : ' + carro[propriedade]);//Será impresso as propriedades do objeto carro e as "caracteristicas" de cada propriedade do objeto carro.
+     }
+
+   
