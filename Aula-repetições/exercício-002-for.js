@@ -45,4 +45,17 @@ for(let i = 0; i < 11; i++){
       console.log(propriedade + ' : ' + carro[propriedade]);//Será impresso as propriedades do objeto carro e as "caracteristicas" de cada propriedade do objeto carro.
      }
 
+
+   //O for…of nós podemos utilizar para percorrer objetos iteráveis como Maps, Sets e Vetores de forma simples e eficaz. Exemplo: 
+
+   let carros = [ 'fiesta', 'onix', 'fusca', 'saveiro' ];
+
+   for (let carro of carros) {
+    console.log(carro); //Neste caso teremos o valor de cada indice. 
+   }
    
+   //Também é possível exibir o índice referente a cada item usando o método entries()da seguinte forma:
+
+   for (let [index, carro] of carros.entries()) {
+      console.log(index, carro); 
+  }
