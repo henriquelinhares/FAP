@@ -22,7 +22,80 @@ function calculadora(n) {
         console.log("Até mais.");
         break
     }
+}
+    console.log(calculadora(valor));
+
+function nada (n) {
     while (n < 0 || n > 4) {
+    console.log("Opção inválida. Tente novamente.");
+    n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+    }
+}
+console.log(nada(valor));
+
+function soma(n) {
+    while (n == 1) {
+    n1 = Number(entrada.question('Digite o primeiro valor: '));
+    n2 = Number(entrada.question('Digite o segundo valor: '));
+    console.log("O resultado é: " + (n1 + n2));
+    n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+   }
+}
+console.log(soma(valor));
+
+function subtracao(n) {
+     while (n == 2) {
+    n1 = Number(entrada.question('Digite o primeiro valor: '));
+    n2 = Number(entrada.question('Digite o segundo valor: '));
+    console.log("O resultado é: " + (n1 - n2));
+    n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+   }
+}
+console.log(subtracao(valor));
+
+function multiplicacao(n) {
+    while (n == 3) {
+    n1 = Number(entrada.question('Digite o primeiro valor: '));
+    n2 = Number(entrada.question('Digite o segundo valor: '));
+    console.log("O resultado é: " + (n1 * n2));
+    n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+   }
+}
+console.log(multiplicacao(valor));
+
+function divisao(n) {
+    while (n == 4) {
+    n1 = Number(entrada.question('Digite o primeiro valor: '));
+    n2 = Number(entrada.question('Digite o segundo valor: '));
+    console.log("O resultado é: " + (n1 / n2));
+    n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+   }
+} 
+console.log(divisao(valor));  
+
+/*
+ if (n == 1) {
+    return n1 + n2
+} else if (n == 2) {
+    return n1 - n2
+} else if (n == 3) {
+    return n1 * n2
+} else if (n == 4) {
+    return n1 / n2
+} else if (n == 0) {
+    return 'Fim do programa.'
+
+    let n1 = Number(entrada.question('Digite o primeiro valor: '));
+let n2 = Number(entrada.question('Digite o segundo valor: ')); 
+
+let valor = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
+
+function calculadora(n) {
+    while (n == 0) {
+        console.log("Até mais.");
+        break
+    }
+    while (n < -0) {
     console.log("Opção inválida. Tente novamente.");
     n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
     }
@@ -51,19 +124,5 @@ function calculadora(n) {
     n = Number(entrada.question('Digite o número da operação que deseja. 1: +; 2: -; 3: *; 4: /; 0: sair. '));
    }
 }
-console.log(calculadora(valor));
-
-/* if (n == 1) {
-    return n1 + n2
-} else if (n == 2) {
-    return n1 - n2
-} else if (n == 3) {
-    return n1 * n2
-} else if (n == 4) {
-    return n1 / n2
-} else if (n == 0) {
-    return 'Fim do programa.'
-
-    let n1 = Number(entrada.question('Digite o primeiro valor: '));
-let n2 = Number(entrada.question('Digite o segundo valor: ')); 
-} */
+console.log(calculadora(valor)); 
+*/
