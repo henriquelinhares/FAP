@@ -14,7 +14,7 @@ Digite o número para a operação correspondente e caso o usuário introduza qu
 
 const entrada= require('readline-sync');
 
-let numero = Number(entrada.question('Informe o valor da operação que deseja. 1: +; 2: -; 3: *; 4: /; ou 0: para sair. ')); 
+let numero = Number(entrada.question('Informe o valor da operação que deseja. 1: soma; 2: subtração; 3: multiplicação; 4: divisão; ou 0: para sair. '));
 
 while (numero > 4) {
     console.log('Opção inválida. Tente novamente. ');
@@ -35,5 +35,5 @@ while (numero != 0) {
     } else {
         console.log('Até a próxima.');
     }
-    numero = Number(entrada.question('Informe o valor da operação que deseja. 1: +; 2: -; 3: *; 4: /; ou 0: para sair. '));
+    numero = Number(entrada.question('Informe o valor da operação que deseja. 1: soma; 2: subtração; 3: multiplicação; 4: divisão; ou 0: para sair. '));
 }
