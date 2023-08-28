@@ -30,7 +30,23 @@ Para imprimir o valor de todos os vetores na tela,  um de cada vez, sem precisar
     for(let pos = 0; pos < A.length; pos++){console.log(A[pos])}; 
     
     vejamos que foi criado uma variavel chamada pos, ela funciona como um contador. Em seguida a condição foi caso pos seja menor que o tamanho da variavel A, a estrutura repete a impressão da variavel pos acrescentando mais 1. Ficar atendo que, no console.log a variavel que for ser impressa deverá conter entre chaves a variavel contador. 
+
+Para array e objetos, também temos uma sintaxe de for ainda mais simples para fazermops a mesma impressão anterior. 
+    let A = [5,8,4,6,7]
+    for(let pos in A){console.log(A[pos])} 
+
+    vejamos que o código ficou ainda menor. Essa estruta se ler: for = para e in = em/dentro. 
+    Ou seja, para cada posição na variavel A, conte pos mais 1 vez.
+
+Para buscar valores dentro de um vetor, nós podemos utilizar o metodo indexOf(). 
+    let A = [5,8,4,6,7]
+    A.indexOf(4)
+
+    Vejamos que o metodo indexOf foi utilizado para buscar o valor 4 dentro da variavel. Caso tenha o valor, vai ser retornado para nós a posição de indice/chave do valor 4, que neste exemplo é 2. 
+
+    Caso seja solicitado um valor que não tem dentro da variavel, será retornado o valor -1 que significa que bão foi encontrado nenhuma ocorrencia do valor. 
 */
+
 
 /* let num = [5, 8, 2, 9, 3]
     num[5] = 4;
@@ -41,8 +57,28 @@ console.log(`Nosso vetor em ordem é o: ${num.sort()}`);
 console.log(`O tamanho da nossa variavel é: ${num.length}`);
 console.log(`O nosso elemnto na segunda posição é 0: ${num[2]}`); */
 
+/* Exemplificando o uso do for em variavel composta: 
 let A = [5,8,4,6,7]
     A.sort()
-for(let pos = 0; pos < A.length; pos++){console.log(A[pos])}; 
+for(let pos = 0; pos < A.length; pos++){console.log(`A posição ${pos} tem o valor: ${A[pos]}`)}; 
+*/
 
+/* Exemplificando o uso do for in em variavel composta. 
 
+let num = [1, 2, 3, 4, 5]
+
+for (let pos in num) {
+   console.log(`A posição ${pos} tem o valor ${num[pos]}`);
+}
+*/
+
+/* Exemplificando a busca de valores dentro das variaveis
+
+let numero = [2, 4, 3, 5, 6, 7, 9]
+    numero = numero.indexOf(8)
+if (numero == -1) {
+    console.log(`A posição do valor não foi encontrada!`);
+} else {
+    console.log(`A posição do valor é: ${numero}`);
+} 
+*/
