@@ -62,3 +62,9 @@ const entrada = require('readline-sync');
                 return n * fatorial(n-1)
             }
         }
+
+
+        function subtração(n1=0, n2=0){
+            return n1 - n2
+        }
+        console.log(subtração(4,2));
