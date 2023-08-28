@@ -11,21 +11,18 @@ Quando a votação for finalizada, o código deverá mostrar o vencedor, aquele 
 
 const entrada= require('readline-sync');
 
-const candidatos = {
-    candidato_1: 0,
-    candidato_2: 0,
-    candidato_3: 0,
+let voto = entrada.question('Fulano: 1; Sicrano: 2; Beltrano: 3; Branco: 0. Digite o seu voto: ');
+while (voto < 0 || voto > 3 || isNaN(voto)) {
+    console.log("Você escolheu uma opção inválida.");
+    voto = entrada.question('Fulano: 1; Sicrano: 2; Beltrano: 3; Branco: 0. Digite o seu voto: ');
+} 
+
+function eleição(fulano, sicrano, beltrano, branco) {
+    let candidatos = {
+    fulano: 889,
+    sicrano: 847,
+    beltrano: 515,
     branco: 0
+    }
+
 }
-let voto = entrada.question('Digite o numero do seu eleitor: ');
-
-function eleicao(candidato1, candidato2, candidato3, branco) {
-   for(candidatos; voto == 1; candidato1++);
-   for(candidatos; voto == 2; candidato2++);
-   for(candidatos; voto == 3; candidato3++);
-   for(branco; voto == branco; branco++);
-}
- console.log(eleicao());
-
-
-
