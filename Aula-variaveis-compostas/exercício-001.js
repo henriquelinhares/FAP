@@ -92,3 +92,17 @@ let pessoas = [
 ];
 
 */
+
+/* Para adicionar elementos em um array, usamos métodos como push(), unshift() ou splice(). 
+
+    push(): adiciona um ou mais elementos no fim do array.   
+    unshift(): adiciona um ou mais elementos no início do array.
+    splice(): pode ser utilizado para adicionar elementos em qualquer posição do array. Também podemos usá-lo para substituir ou remover elementos existentes.
+*/
+
+/* Para remover elementos de um array, usamos métodos como pop(), shift() ou splice().
+
+    pop(): remove e retorna o último elemento do array.
+    shift(): remove e retorna o primeiro elemento do array.
+    splice(): como mencionado anteriormente, esse método pode ser usado para remover elementos em qualquer posição do array.
+*/
