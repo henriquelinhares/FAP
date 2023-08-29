@@ -82,3 +82,13 @@ if (numero == -1) {
     console.log(`A posição do valor é: ${numero}`);
 } 
 */
+
+/* Sintaxe de um array de objetos: 
+
+let pessoas = [
+    {nome: 'Alice', idade: 27},
+    {nome: 'Luiz', idade: 30},
+    {nome: 'Henrique', idade: 30}
+];
+
+*/
