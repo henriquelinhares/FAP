@@ -38,11 +38,22 @@ while (voto != 5) {
     voto = Number(entrada.question('Veja o candidato e escolha um. candidato Fulano: 1; candidato Sicrano: 2; Candidato Beltrano: 3; Em Branco: 4; Para encerrar a votacao: 5. Digite o seu voto: '));
 }
 if(voto == 5){
-    console.log('Votação encerrada.');
-    function getMaxOfArray(numArray) {
-        return Math.max.apply(null, numArray);
-    }
-    console.log("O vencedor teve: " + getMaxOfArray([fulano, beltrano, sicrano, branco, nulo]) + ' votos.');
+    console.log('Votação encerrada.');   
+} 
+if(fulano > sicrano || fulano > beltrano){
+    console.log('O vencedor foi Fulano. Ele obteve ' + fulano + ' votos.');
+} else if(sicrano > fulano || sicrano > beltrano){
+    console.log('O vencedor foi Sicrano. Ele obteve ' + sicrano + ' votos.');
+} else {
+    console.log('O vencedor foi Beltrano. Ele obteve ' + beltrano + ' votos.');
 }
+console.log(`O candidato Fulano teve ${fulano} votos. O candidato Sicrano teve ${sicrano} votos. O candidato Beltrano teve ${beltrano} votos. Também tivemos ${nulo} votos nulos e ${branco} votos em branco.`);
+    
 
 
+// Exemplo de função para mostrar o maior valor das variaveis ou de um array. 
+
+/* function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+}
+console.log("O vencedor teve: " + getMaxOfArray(['variaveis ou array']) + ' votos.'); */ 
