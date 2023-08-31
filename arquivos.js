@@ -1,28 +1,27 @@
-/* Você deve criar três listas em JavaScript:
+/* Temos o array [15, 8, 10, 25, 12, 30, 5, 20, 18, 7] e precisamos criar um código em JavaScript para encontrar o valor 20.
 
-1. para guardar os nomes de dez pessoas;
-2. para guardar as suas idades;
-3. para guardar as suas cores favoritas.
+Para isso, temos que escolher entre realizar uma busca linear ou binária de acordo com a que for mais adequada para essa situação.
 
-Em seguida, imprima essas listas. Depois, faça algumas modificações, alterando uma cor e uma idade. Ao terminar, imprima novamente todas as informações das três listas.
+Codifique a solução mais eficiente para buscar o número 20 no array.
+
 */
 
-let nomes = ['Alice', 'Henrique', 'Luiz', 'Maria', 'Pedro', 'Marta', 'João', 'Amelia', 'Eva', 'Luiza'];
-for (let pos = 0; pos < nomes.length; pos++){
-    console.log(nomes[pos]);
+
+function elemento(array, elementoBuscado) {
+    for (let i = 0; i < array.length; i++){
+        if(array[i] === elementoBuscado){
+            return i
+        } 
+    }
+    return -1
 }
 
-let idades = [27, 30, 62, 60, 10, 15, 5, 55, 3, 7]; 
-for(let dep = 0; dep < idades.length; dep++){
-    console.log(idades[dep]);
+let meuArray = [15, 8, 10, 25, 12, 30, 5, 20, 18, 7]; 
+let numeroProcurado = 20;
+let indiceEncontrado = elemento(meuArray, numeroProcurado); 
+
+if(indiceEncontrado !== -1){
+    console.log("O indicide do valor " + numeroProcurado + " na lista é: " + indiceEncontrado);
+} else {
+    console.log("O valor procurado " + numeroProcurado + " não está na lista.");
 }
-
-let coresFavoritas = ['azul', 'vermelho', 'preto', 'verde', 'roxo', 'branco', 'amarelo', 'rosa', 'lilas', 'cinza'];
-for(let depois = 0; depois < coresFavoritas.length; depois++){
-    console.log(coresFavoritas[depois]);
-}
-
-idades.splice(3, 1, 62); //Alterando o elemento na terceira posição(indice) para 62. 
-coresFavoritas.splice(9, 1, 'azul') // Alterando o elemento da ultima posição(indice) para azul. 
-
-console.log(nomes, idades, coresFavoritas); 
