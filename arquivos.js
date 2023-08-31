@@ -25,3 +25,87 @@ if(indiceEncontrado !== -1){
 } else {
     console.log("O valor procurado " + numeroProcurado + " não está na lista.");
 }
+
+
+/* Faça um programa que leia o nome do aluno, três notas e mostre o nome e a média(aritmética) do aluno.
+*/
+const entrada = require('readline-sync');
+
+
+/* 
+let nomeAluno = entrada.question('Digite seu nome: '); 
+let nota1 = Number(entrada.question('Digite a primeira nota: ')); 
+let nota2 = Number(entrada.question('Digite a segunda nota: '));
+let nota3 = Number(entrada.question('Digite a terceira nota: '));
+
+function media(n1, n2, n3) {
+    return (n1 + n2 + n3) / 3
+}
+
+console.log("A média do aluno foi: " + media(nota1, nota2, nota3)); */
+
+
+
+/* Faça um programa com Javascript para verificar se um determinado ano, fornecido pelo usuário, é bissexto. Um ano é bissexto se for divisível por 400 ou se for divisível por 4 e não for divisível por 100.Exemplos: 1988, 1992, 1996, 2000. Repare que 1900 não é bissexto.
+
+
+let ano = Number(entrada.question('Digite um ano: ')); 
+
+if ((ano % 4 == 0) && (ano % 100 != 0) || (ano % 400 == 0))
+    console.log(`${ano} é ano bissexto.`); 
+else
+    console.log(`${ano} não é ano bissexto.`); 
+
+*/
+
+
+
+/* 3. Uma determinada empresa vende seus produtos em quatro diferentes estados. Cada estado possui uma taxação de imposto diferente sobre o produto (MG: 7%; SP: 12%; RJ: 15%; MS: 8%). Faça um programa em Javascript, que o usuário entre com o valor e o estado destino do produto e o programa retorne o preço final do produto acrescido do imposto correspondente ao estado onde será vendido. O programa deve mostrar uma mensagem de erro caso o estado fornecido não esteja na lista de estados válidos. 
+
+
+let valor = parseFloat(entrada.question('Digite o valor da compra: '));   //Tentar implementar um while para caso insira um valor incorreto
+console.log('Os estados disponiveis são: MG, SP, RJ E MS.');
+let estado = entrada.question('Digite o estado de destino: ');
+
+function acrescentar(valor, local){
+    if(local == 'MG'){
+        return (valor + valor * (7/100)); 
+    } else if(local == 'SP'){
+        return (valor + valor * (12/100));
+    } else if(local == 'RJ'){
+        return (valor + valor * (15/100)); 
+    } else if(local == 'MS'){
+        return (valor + valor * (8/100));
+    }
+}
+console.log("O valor final acrescentando o imposto do estado escolhdo é: " + acrescentar(valor, estado)); 
+
+*/
+
+/* 4. Faça um programa que calcule e mostre a soma dos 50 primeiros números pares. Faça três versões desse programa, cada uma usando uma estrutura de repetição diferente (for, while, do-while). Qual das três estruturas é a mais adequada para este programa? Por que? 
+*/
+
+// let numeros = 50; 
+
+// function somaDosPares(x) {
+//     let soma = 0;
+//     for (let i = 0; i <= x; i += 2) soma += i
+//     return soma;
+// }
+//  console.log(somaDosPares(numeros)); 
+
+let soma = 0; 
+let contador = 0;
+let i = 1;
+
+while (true) {
+    if (i % 2 == 0) {
+        soma += i
+        contador++
+    }
+    if (contador >= 3) {
+        break;
+    }
+    i++
+}
+console.log(soma); 
