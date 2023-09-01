@@ -82,12 +82,38 @@ const entrada= require('readline-sync');
     o percentual de aumento aplicado;
     o valor do aumento;
     o novo salário, após o aumento.
-    informe na tela:
-    o salário antes do reajuste;
-    o percentual de aumento aplicado;
-    o valor do aumento;
-    o novo salário, após o aumento.
+    
 */
 
-let salario = parseFloat(entrada.question('Digite o valor do seu sálario: ')); 
+let salario = parseFloat(entrada.question('Digite o valor do seu sálario: '));
 
+function porcentagem(x) {
+    if(x <= 280.00){
+        return 'aumento de 20%'
+    } else if(x <= 700){
+        return 'aumento de 15%'
+    } else if(x <= 1500.00){
+        return 'aumento de 10%'
+    } else if(x >= 1500.00){
+        return 'aumento de 5%'
+    } else {
+        'Valor inválido.'
+    }
+}
+
+function reajuste(x) {
+    if (x <= 280.00) {
+        return x = ((20/100) * x)
+    } else if(x <= 700.00){
+        return x = ((15/100) * x)
+    } else if(x <= 1500.00){
+        return x = ((10/100) * x)
+    } else if(x >= 1500.00){
+        return x = ((5/100) * x )
+    } else{
+        return 'Valor inválido.'
+    }
+}
+
+console.log(`O salario antes do reajuste era: ${salario} Reais.` + ` Houve um ` + porcentagem(salario) + ' no sálario.');
+console.log(`Agora o sário está custando: ` + (salario + reajuste(salario)) + ' Reais.');
