@@ -85,35 +85,93 @@ const entrada= require('readline-sync');
     
 */
 
-let salario = parseFloat(entrada.question('Digite o valor do seu sálario: '));
+// let salario = parseFloat(entrada.question('Digite o valor do seu sálario: '));
 
-function porcentagem(x) {
-    if(x <= 280.00){
-        return 'aumento de 20%'
-    } else if(x <= 700){
-        return 'aumento de 15%'
-    } else if(x <= 1500.00){
-        return 'aumento de 10%'
-    } else if(x >= 1500.00){
-        return 'aumento de 5%'
-    } else {
-        'Valor inválido.'
-    }
-}
+// function porcentagem(x) {
+//     if(x <= 280.00){
+//         return 'aumento de 20%'
+//     } else if(x <= 700){
+//         return 'aumento de 15%'
+//     } else if(x <= 1500.00){
+//         return 'aumento de 10%'
+//     } else if(x >= 1500.00){
+//         return 'aumento de 5%'
+//     } else {
+//         'Valor inválido.'
+//     }
+// }
 
-function reajuste(x) {
-    if (x <= 280.00) {
-        return x = ((20/100) * x)
-    } else if(x <= 700.00){
-        return x = ((15/100) * x)
-    } else if(x <= 1500.00){
-        return x = ((10/100) * x)
-    } else if(x >= 1500.00){
-        return x = ((5/100) * x )
+// function reajuste(x) {
+//     if (x <= 280.00) {
+//         return x = ((20/100) * x)
+//     } else if(x <= 700.00){
+//         return x = ((15/100) * x)
+//     } else if(x <= 1500.00){
+//         return x = ((10/100) * x)
+//     } else if(x >= 1500.00){
+//         return x = ((5/100) * x )
+//     } else{
+//         return 'Valor inválido.'
+//     }
+// }
+
+// console.log(`O salario antes do reajuste era: ${salario} Reais.` + ` Houve um ` + porcentagem(salario) + ' no sálario.');
+// console.log(`Agora o sário está custando: ` + (salario + reajuste(salario)) + ' Reais.');
+
+
+/* 9. Faça um script para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O script deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
+ Desconto do IR:
+    Salário Bruto até 900 (inclusive) - isento
+    Salário Bruto até 1500 (inclusive) - desconto de 5%
+    Salário Bruto até 2500 (inclusive) - desconto de 10%
+
+    Salário Bruto acima de 2500 - desconto de 20% Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.
+
+    Salário Bruto: (5 * 220)        : R$ 1100,00
+    (-) IR (5%)                                : R$   55,00
+    (-) INSS ( 10%)                       : R$  110,00
+    FGTS (11%)                            : R$  121,00
+    Total de descontos                : R$  165,00
+    Salário Liquido                       : R$  935,00
+*/
+
+let horasTrabalhadas = Number(entrada.question('Digite a quantidade de horas trabalhadas: '));
+let valorHora = Number(entrada.question('Digite o valor da sua hora trabalhada: ')); 
+let horas = Number(horasTrabalhadas * valorHora);
+
+console.log('Sálario bruto: ' + 'horas trabalhadas x valor da hora trabalhada = R$' + horas);
+
+function impostoRenda(x){
+    if(x <= 900){
+        
+    } else if(x == 901 || x <= 1500){
+        return parseFloat(x * (5/100))
+    } else if(x == 1501 || x <= 2500){
+        return parseFloat(x * (10/100))
     } else{
-        return 'Valor inválido.'
+        return parseFloat(x * (20/100))
     }
 }
 
-console.log(`O salario antes do reajuste era: ${salario} Reais.` + ` Houve um ` + porcentagem(salario) + ' no sálario.');
-console.log(`Agora o sário está custando: ` + (salario + reajuste(salario)) + ' Reais.');
+if (impostoRenda(horas) <= 900) {
+    console.log('IR insento.');
+} else if(impostoRenda(horas) == 901 || impostoRenda(horas) <= 1500){
+    console.log('- 5% de IR: ' + impostoRenda(horas));
+} else if (impostoRenda(horas) == 1501 || impostoRenda(horas) <= 2500){
+    console.log('- 10% de IR: R$' + impostoRenda(horas));
+} else{
+    console.log('- 20% de IR: R$' + impostoRenda(horas));
+}
+
+horas = impostoRenda(horas);
+     
+function sindicato(x){
+    return x - ((3/100) * x)
+}
+console.log();
+
+horas 
+
+function INSS(x){
+
+}
