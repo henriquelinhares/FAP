@@ -1,5 +1,7 @@
 const entrada= require('readline-sync');
 
+let geradorMatricula = 3;
+
 const aluno1 = {
     matricula: 1, 
     nome:'Alice Linhares',
@@ -16,29 +18,50 @@ const aluno3 = {
     notas:[8, 7.5, 9],
 }
 
-// const alunos = [aluno1, aluno2, aluno3];
+const alunos = [aluno1, aluno2, aluno3];
 
-console.log(alunos);
+// console.log(alunos); 
 
 let loop = true; 
 while (loop) {
-console.log('=== CADASTRO DE ALUNOS ===');
-console.log('========== MENU ==========');
-console.log('0 - Sair do programa.');
-console.log('1 - Listar todos os alunos.'); 
+    console.log('=== CADASTRO DE ALUNOS ===');
+    console.log('========== MENU ==========');
+    console.log('0 - Sair do programa.');
+    console.log('1 - Listar todos os alunos.');
+    console.log('2 - Cadastrar novo aluno.');
 
-let opcao = entrada.questionInt('Escolha uma opcao: ');
-switch (opcao) {
-    case 0:
-        console.log('Você saiu do programa.');
-        break;
-    case 1:
-        console.log('Essa é a lista de todos os alunos: ');
-        break
-    default:
-        console.log('Opcao inválida.');
-        break;
-}
+    let opcao = entrada.questionInt('Escolha uma opcao: ');
+    switch (opcao) {
+        case 0:
+            console.log('Você saiu do programa.');
+            loop = false;
+            break;
+        case 1:
+            console.log('Essa é a lista de todos os alunos: ');
+            for (const al of alunos) {
+                console.log(`Mat. : ${al.matricula}`);
+                console.log(`Nome : ${al.nome}`);
+                console.log(`Notas: ${al.notas}`);
+            }
+            break
+        case 2: 
+            let nomeAluno = entrada.question('Digite o nome do aluno: '); 
+            let notasAlunos = [];
+            for(let i = 0; i < 3; i++){
+                notasAlunos[i] = entrada.questionFloat(`Digite a nota ${i + 1}: ` );
+            }
+            const aluno = {
+                matricula: ++geradorMatricula,
+                nome: nomeAluno,
+                notas: notasAlunos,
+            };
+            alunos.push(aluno)
+            console.log('Aluno cadastrado com sucesso.');
+            break
+        default:
+            console.log('Opcao inválida.');
+            break;
+    }
 } 
 
 
