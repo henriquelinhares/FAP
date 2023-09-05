@@ -29,7 +29,8 @@ while (loop) {
     console.log('0 - Sair do programa.');
     console.log('1 - Listar todos os alunos.');
     console.log('2 - Cadastrar novo aluno.');
-    console.log('3 - Busque um cadastro');
+    console.log('3 - Busque um cadastro.');
+    console.log('4 - Alterar um aluno.');
 
     let opcao = entrada.questionInt('Escolha uma opcao: ');
     switch (opcao) {
@@ -40,6 +41,7 @@ while (loop) {
         case 1:
             console.log('Essa é a lista de todos os alunos: ');
             for (const al of alunos) {
+                if(busca === al.matricula)
                 console.log(`Mat. : ${al.matricula}`);
                 console.log(`Nome : ${al.nome}`);
                 console.log(`Notas: ${al.notas}`);
@@ -61,14 +63,21 @@ while (loop) {
 
             break
         case 3:
-            let busca = entrada.questionInt('Digite o número da matricula: ');
+            let busca = entrada.questionInt('Matricula do aluno que deseja buscar: ');
             for (const al of alunos) {
-                if (busca === alunos.matricula) {
+                if (al.matricula === busca) {
                     console.log(`Matricula: ${al.matricula}`);
                     console.log(`Nome : ${al.nome}`);
                     console.log(`Notas: ${al.notas}`);
-                    }
-                
+                    } 
+            }
+            break
+        case 4:
+            let alterar = entrada.questionInt('Matricula do aluno que deseja alterar: ');
+            for (const al of alunos) {
+                if (al.matricula === alterar) {
+                    console.log(``);
+                }
             }
             break
         default:
