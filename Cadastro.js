@@ -63,9 +63,12 @@ while (loop) {
         case 3:
             let busca = entrada.questionInt('Digite o número da matricula: ');
             for (const al of alunos) {
-                console.log(`Mat. : ${al.matricula}`);
-                console.log(`Nome : ${al.nome}`);
-                console.log(`Notas: ${al.notas}`);
+                if (busca === alunos.matricula) {
+                    console.log(`Matricula: ${al.matricula}`);
+                    console.log(`Nome : ${al.nome}`);
+                    console.log(`Notas: ${al.notas}`);
+                    }
+                
             }
             break
         default:
