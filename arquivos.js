@@ -109,3 +109,8 @@ while (true) {
     i++
 }
 console.log(soma); 
+
+
+
+
+
