@@ -29,6 +29,7 @@ while (loop) {
     console.log('0 - Sair do programa.');
     console.log('1 - Listar todos os alunos.');
     console.log('2 - Cadastrar novo aluno.');
+    console.log('3 - Busque um cadastro');
 
     let opcao = entrada.questionInt('Escolha uma opcao: ');
     switch (opcao) {
@@ -57,6 +58,15 @@ while (loop) {
             };
             alunos.push(aluno)
             console.log('Aluno cadastrado com sucesso.');
+
+            break
+        case 3:
+            let busca = entrada.questionInt('Digite o número da matricula: ');
+            for (const al of alunos) {
+                console.log(`Mat. : ${al.matricula}`);
+                console.log(`Nome : ${al.nome}`);
+                console.log(`Notas: ${al.notas}`);
+            }
             break
         default:
             console.log('Opcao inválida.');
