@@ -136,3 +136,8 @@ Estado Civil: 's', 'c', 'v', 'd';
 
 /* 7: Faça um programa que leia 5 números e informe o maior número. */
 
+const numeros = [4, 6, 3, 2, 8];
+for (const n of numeros) {
+    console.log(n);
+}
+

@@ -7,24 +7,24 @@ Codifique a solução mais eficiente para buscar o número 20 no array.
 */
 
 
-function elemento(array, elementoBuscado) {
-    for (let i = 0; i < array.length; i++){
-        if(array[i] === elementoBuscado){
-            return i
-        } 
-    }
-    return -1
-}
+// function elemento(array, elementoBuscado) {
+//     for (let i = 0; i < array.length; i++){
+//         if(array[i] === elementoBuscado){
+//             return i
+//         } 
+//     }
+//     return -1
+// }
 
-let meuArray = [15, 8, 10, 25, 12, 30, 5, 20, 18, 7]; 
-let numeroProcurado = 20;
-let indiceEncontrado = elemento(meuArray, numeroProcurado); 
+// let meuArray = [15, 8, 10, 25, 12, 30, 5, 20, 18, 7]; 
+// let numeroProcurado = 20;
+// let indiceEncontrado = elemento(meuArray, numeroProcurado); 
 
-if(indiceEncontrado !== -1){
-    console.log("O indicide do valor " + numeroProcurado + " na lista é: " + indiceEncontrado);
-} else {
-    console.log("O valor procurado " + numeroProcurado + " não está na lista.");
-}
+// if(indiceEncontrado !== -1){
+//     console.log("O indicide do valor " + numeroProcurado + " na lista é: " + indiceEncontrado);
+// } else {
+//     console.log("O valor procurado " + numeroProcurado + " não está na lista.");
+// }
 
 
 /* Faça um programa que leia o nome do aluno, três notas e mostre o nome e a média(aritmética) do aluno.
@@ -94,23 +94,61 @@ console.log("O valor final acrescentando o imposto do estado escolhdo é: " + ac
 // }
 //  console.log(somaDosPares(numeros)); 
 
-let soma = 0; 
-let contador = 0;
-let i = 1;
+// let soma = 0; 
+// let contador = 0;
+// let i = 1;
 
-while (true) {
-    if (i % 2 == 0) {
-        soma += i
-        contador++
-    }
-    if (contador >= 3) {
-        break;
-    }
-    i++
+// while (true) {
+//     if (i % 2 == 0) {
+//         soma += i
+//         contador++
+//     }
+//     if (contador >= 3) {
+//         break;
+//     }
+//     i++
+// }
+// console.log(soma); 
+
+
+// var carros = [
+//     { id: 1, modelo: 'Corsa', marca: 'Chevrolet', preco: 45000, createdAt: 1534506085621 },
+//     { id: 2, modelo: 'Punto', marca: 'Fiat', preco: 120000, createdAt: 1534506085621 }
+//   ]
+  
+//   var total = 0
+
+//   for(var i = 0; i < carros.length; i++) {
+//     total += carros[i].preco
+// }
+// for(const carro of carros) {
+//     total += carro.preco
+// }
+
+const aluno = {
+    nome: 'Luiz',
+    sobrenome: 'Linhares',
+    nota1: 10,
+    nota2: 9,
+    nota3: 8
 }
-console.log(soma); 
+const aluno2 = {
+    nome: 'Henrique',
+    sobrenome: 'Silva',
+    nota1: 10,
+    nota2: 9,
+    nota3: 8
+}
+
+const alunos = {...aluno,...aluno2}; 
+
+for (const dado in aluno2) {
+   console.log(dado + ':' + aluno2[dado]);
+}
 
 
+let notas = [10, 8, 9, 8, 9]; 
 
-
-
+for (const n of notas) {
+    console.log('Primeira nota: ' + notas[0]);
+}
