@@ -102,7 +102,6 @@ while (rodar) {
         case 5:
             pesquisaIDExcluir = readline.questionInt("Digite o ID do médico que deseja excluir:");
             excluir(pesquisaIDExcluir);
-
             break;
 
         default:
