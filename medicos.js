@@ -141,3 +141,4 @@ function alterar(pesquisaIDAlterar) {
     console.log("Médico alterado com sucesso!");
     readline.keyInPause();
 } 
+
