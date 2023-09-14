@@ -97,20 +97,23 @@ while (rodar) {
 
         case 4:
             let pesquisaIDAlterar = readline.questionInt("Digite o ID do médico que deseja alterar: ");
-            for (const m of medicos) {
-                if (m.id === pesquisaIDAlterar) {
-                    console.log(`Médico selecionado ${m.nome}`); 
-                    m.nome = readline.question("Digite o nome do médico:");
-                    m.crm = readline.question("Digite o CRM do médico:");
-                    m.especialidade = readline.question("Digite a especialidade do médico:");
-
-                }
-            }
-            console.log("Médico alterado com sucesso!");
-            readline.keyInPause();
+            alterar(pesquisaIDAlterar)
             break;
         case 5:
             pesquisaIDExcluir = readline.questionInt("Digite o ID do médico que deseja excluir:");
+            excluir(pesquisaIDExcluir);
+
+            break;
+
+        default:
+            console.log("Opção invalida.....");
+            console.log("Escolha uma opção válida......");
+            break;
+    }
+
+}
+
+function excluir(pesquisaIDExcluir) {
             for (const m of medicos) {
                 if (m.id === pesquisaIDExcluir) {
                     console.log(`\n O Id é referente ao médico ${m.nome}`);
@@ -123,13 +126,18 @@ while (rodar) {
             }
             console.log("Médico excluído com sucesso!");
             readline.keyInPause();
-            break;
-
-        default:
-            console.log("Opção invalida.....");
-            console.log("Escolha uma opção válida......");
-            break;
-    }
-
 }
 
+function alterar(pesquisaIDAlterar) {
+    for (const m of medicos) {
+        if (m.id === pesquisaIDAlterar) {
+            console.log(`Médico selecionado ${m.nome}`); 
+            m.nome = readline.question("Digite o nome do médico:");
+            m.crm = readline.question("Digite o CRM do médico:");
+            m.especialidade = readline.question("Digite a especialidade do médico:");
+
+        }
+    }
+    console.log("Médico alterado com sucesso!");
+    readline.keyInPause();
+} 
