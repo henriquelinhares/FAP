@@ -16,7 +16,7 @@ pesquisaIDExcluir = readline.questionInt("Digite o ID do médico que deseja excl
             break;
 
 
-function excluir(m){
+function excluir(){
     pesquisaIDExcluir = readline.questionInt("Digite o ID do médico que deseja excluir:");
     for (const m of medicos) {
         if (m.id === pesquisaIDExcluir) {
