@@ -81,9 +81,9 @@ while (loop) {
                  iterator.idade = entrada.question('Informa a idade do funcionário: ');
                  iterator.função = entrada.question('Infrme a função do funcionário: ');
                 }
-                console.log('=========================================================');
-                console.log('Dados alterados com sucesso.');
             }
+            console.log('=========================================================');
+            console.log('Dados alterados com sucesso.');
             break
             readline.keyInPause();
         case 5:
