@@ -46,7 +46,8 @@ while (loop) {
                 console.log(`Nome : ${al.nome}`);
                 console.log(`Notas: ${al.notas}`);
             }
-            break
+            break 
+            readline.keyInPause();
         case 2: 
             let nomeAluno = entrada.question('Digite o nome do aluno: '); 
             let notasAlunos = [];
@@ -61,7 +62,8 @@ while (loop) {
             alunos.push(aluno)
             console.log('Aluno cadastrado com sucesso.');
 
-            break
+            break 
+            readline.keyInPause();
         case 3:
             let busca = entrada.questionInt('Matricula do aluno que deseja buscar: ');
             for (const al of alunos) {
