@@ -1,9 +1,5 @@
 const readline = require("readline-sync"); //biblioteca readline-sync, que tem como objetivo permitir que sejam informados dados ao sistema
 
-let rodar = true;
-
-let gerador_id = 2;
-
 class Medico {
     constructor(id, crm, nome, especialidade) {
         this.id = id;
@@ -17,6 +13,10 @@ const medico1 = new Medico(1, "CRM/PE 123456", "Jose Maria", "Cirurgia geral");
 const medico2 = new Medico(2, "CRM/PE 789012", "Maria Ferreira", "Cardiologia");
 
 const medicos = [medico1, medico2];
+
+let rodar = true;
+
+let gerador_id = 2;
 
 while (rodar) {
     console.clear();
