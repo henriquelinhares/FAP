@@ -1,4 +1,4 @@
-const readline = require("readline-sync");
+const readline = require("readline-sync"); //biblioteca readline-sync, que tem como objetivo permitir que sejam informados dados ao sistema
 
 let rodar = true;
 
