@@ -1,6 +1,6 @@
 const entrada= require('readline-sync');
 
-// //Função sem paramêtro
+// //Função sem parametro
 
 // let numero1 = entrada.questionInt("Digite um número: ");
 // let numero2 = entrada.questionInt("Digite outro número: ");
@@ -12,7 +12,7 @@ const entrada= require('readline-sync');
 
 // somar()
 
-//Função com paramêtro
+//Função com parametro
 
 // let numero1 = entrada.questionInt("Digite um número: ");
 // let numero2 = entrada.questionInt("Digite outro número: ");
