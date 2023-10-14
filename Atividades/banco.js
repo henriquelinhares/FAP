@@ -19,4 +19,3 @@ connectToDatabase();
 
 // Neste exemplo, estamos usando a função MongoClient.connect para estabelecer uma conexão com o banco de dados MongoDB. Se ocorrer um erro durante a conexão, a função de callback será chamada com o erro como parâmetro. Caso contrário, a conexão será estabelecida com sucesso e a função de callback será chamada sem erros.
 
-// Espero que este exemplo possa te ajudar a implementar e tratar uma conexão com o banco de dados usando JavaScript. Lembre-se de substituir a URL de conexão pelo endereço do seu próprio banco de dados.
