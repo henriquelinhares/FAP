@@ -124,73 +124,19 @@ const pessoa3 = new pessoa('Henrique', 25, 'masculino');
 console.log(pessoa1.idade);
 console.log(pessoa3.nome);  
 
+// Objeto literal geralmente é usado para criar um único objeto, já a função construtora é útil se você deseja criar vários objetos. 
 
+//Cada objeto criado a partir da função construtora é único. Você pode ter as mesmas propriedades da função construtora ou adicionar uma nova propriedade a um objeto específico. 
 
-// let pessoa = {
-//     nome: 'João',
-// };
+// No entanto, se um objeto for criado como literal e se uma variável for definida com esse valor de objeto, quaisquer alterações no valor da variável irá alterar o objeto original.
 
-// let usuario = {
-//     idade: 20
-// }
-// console.log("A idade do usuário é: " + usuario.idade);
+const eu = {
+    nome: 'Luiz'
+}
+console.log(eu.nome); //Luiz
 
+let ela = eu; 
+    ela.nome = 'Alice' //Altera o nome do objeto original
+    
+console.log(eu.nome); //Alice
 
-// let produto = {
-//     preço: 50
-// }
-// console.log(" O produto vale: " + produto.preço)
-
-// produto.preço = 70 // Comando para alterar o valor de uma propriedade do objeto.
-
-// console.log("Agora o produto vale: " + produto.preço); 
-
-
-// let contato = {
-//     email: 'linhares.luiz8@gmail.com',
-//     nome: 'Luiz'
-// }
-// console.log("O nome da pessoa é: " + contato.nome + " e o seu email é: " + contato.email);
-
-// delete contato.email // Comando para remover uma pripriedade do objeto. 
-
-// console.log("O nome da pessoa é: " + contato.nome + " e o seu email é: " + contato.email);
-
-
-// let cliente = {
-//     endereço: null // Podemo utilizar null como valor quando a propriedade for receber um valor externo. 
-// }
-
-// console.log('O endereço do cliente é: ' + cliente.endereço);
-
-// cliente.endereço = "Rua A, 123" // Serve para dar valor a uma propriedade de um objeto. Pesquisar outras formas. 
-
-// console.log('O endereço do cliente é: ' + cliente.endereço);
-
-
-// let empresa ={
-//     departamentos: ["Saúde", "segurança", "educação"] // Maneira de colocar mais de um valor na propriedade do objeto. 
-// }
-// console.log(empresa.departamentos[0]); // Maneira de imprimir o primeiro valor da propriedade departamentos. 
-
-
-// let aluno = {
-//     notas: [85, 90, 78]
-// }
-// aluno.notas[1] = 95 // Alterando um dos valores da propriedade usando o indice de identificação do valor(1). 
-
-// console.log("A primeira nota do aluno foi: " + aluno.notas[0]);
-
-
-// let dados = {
-//     valores: [10, 20, 30]
-// }
-// delete dados.valores[1]
-
-// console.log(dados.valores);
-
-
-// let qualquer = {
-//     livro: 'Titulo',
-//     autor: 'Maria'
-// }
