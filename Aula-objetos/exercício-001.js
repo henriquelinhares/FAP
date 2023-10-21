@@ -41,7 +41,7 @@ Sintaxe de objeto:
     // idade: 30
     // }
 // console.log(pessoa1.nome); pessoa1.nome para acessar a propriedade nome de pessoa1
-//console.log(pessoa1['nome']);
+// console.log(pessoa1['nome']);
 
     const professor = {
         nome: 'Henrique',
@@ -51,7 +51,7 @@ Sintaxe de objeto:
     console.log('O nome do professor é: ' + professor.nome);
     console.log('O professor ' + professor.nome + ' ensina ' + professor['materia'] + professor['horário']);
 
-//Um objeto também pode conter outro objeto. Exemplo: 
+// Um objeto também pode conter outro objeto. Exemplo: 
 
     const aluno = {
         nome: 'Henrique',
@@ -61,10 +61,49 @@ Sintaxe de objeto:
             matemática: 9,
         },
     }
-    console.log('O aluno ' + aluno.nome + ' tirou ' + aluno.notas + ' nas provas.');
+    console.log(aluno.notas);
 
+ // Um objeto também pode conter uma função. Exemplo: 
+ 
+    const pessoa2 = {
+        nome:'Amelia',
+        idade: 35, 
+        saudadação: function(){console.log('Olá, pessoa.');} //função em objeto é um método.
+    }
+    console.log(pessoa2.saudadação()); //Acessando o método. 
 
+// Para acessar uma propriedade de um objeto de dentro de um método do mesmo objeto, precisamos usar a palavra-chave-this. Exemplo: 
 
+    const casa = {
+        endereço: 'Rua Amelia',
+        numero: 22,
+        referencia: function(){console.log('A rua é: ' + this.endereço);}
+    }
+    console.log(casa.referencia()); 
+
+// A função dentro de um objeto pode acessar sua váriavels de maneira semelhante a uma função normal. Exemplo:
+
+    const animal = { 
+        nome:'Luck',
+        idade: 12,
+        observação: function(){
+        let raça = 'viralata';
+        console.log('O nome é ' + this.nome + ' e sua raça é ' + raça)},
+    }
+    console.log(animal.observação());
+
+// Também temos função construtora para criar objetos. Exemplo: 
+
+    function usuario(){ //função construtora
+        this.nome = 'Luiz',
+        this.idade = '30'
+    }
+    //cria um objeto
+    const usuario1 = new usuario(); //New é uma palavra chave 
+    const usuario2 = new usuario();
+
+    console.log(usuario1.nome); //acessando propriedades
+    console.log(usuario2.idade);
 
 
 
