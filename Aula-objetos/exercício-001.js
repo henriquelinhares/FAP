@@ -198,3 +198,16 @@ const aqueleAluno = {
 console.log(aqueleAluno.nome); //Acessando propriedade de dados. 
 console.log(aqueleAluno.getNome); //Acessando métodos getter. 
 // console.log(aqueleAluno.getNome()); Erro! Está tentando acessar como método.
+
+
+//Os métodos setters são usados para alterar os valores de um objeto. Exemplo: 
+
+const outroAluno = {
+    nome: 'Luiz', // propriedade de dados. 
+    set setNome(novo_nome){
+        this.nome = novo_nome; // propriedade de acesador(setter).
+    }
+}
+outroAluno.setNome = 'Henrique'; //Acessando propriedade de dados. 
+
+console.log(outroAluno.nome); //
