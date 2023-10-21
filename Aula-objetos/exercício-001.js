@@ -140,3 +140,22 @@ let ela = eu;
     
 console.log(eu.nome); //Alice
 
+
+//Adicionando propriedades e métodos em um objeto. 
+
+function outraPessoa(){
+    this.nome = 'João',
+    this.idade = 25
+}
+
+let outrapessoa1 = new outraPessoa();
+let outraPessoa2 = new outraPessoa();
+
+outrapessoa1.genero = 'masculino'; //Adicionando propriedade ao objeto outraPessoa1
+outrapessoa1.alerta = function(){
+    console.log('Olá.');  //Adicionando métodos ao objeto outraPessoa1
+}
+
+outrapessoa1.alerta(); //Olá
+outraPessoa2.alerta(); // Erro! outraPessoa2 não possui método. 
+
