@@ -20,11 +20,11 @@ Sintaxe de objeto:
 */
 // Exemplo
 
-    const pessoa = {
-        nome: 'Luiz',
-        idade: 30
-    }
-    console.log('A nome do aluno é: ' + pessoa.nome);
+    // const pessoa = {
+    //     nome: 'Luiz',
+    //     idade: 30
+    // }
+    // console.log('A nome do aluno é: ' + pessoa.nome);
 
 // Também podemos criar um objeto em uma única linha. 
 
@@ -105,8 +105,24 @@ Sintaxe de objeto:
     console.log(usuario1.nome); //acessando propriedades
     console.log(usuario2.idade);
 
+// Quando a palavra this é usada em uma função construtora, refere-se ao objeto quando o objeto é criado. Portanto, quando um objeto acessa as propriedades, ele pode acessar diretamente a propriedade como pessoa1.nome
 
 
+// Parâmetros de uma função construtora. 
+
+function pessoa(nome_pessoa, idade_pessoa, genero_pessoa){ //parêmetros recebidos.
+    this.nome = nome_pessoa,
+    this.idade = idade_pessoa,  //atribuindo valores de parametros ao objeto de chamada
+    this.genero = genero_pessoa,
+    this.saudar = function(){
+        return ('Oi ' + this.nome);
+    }
+}
+const pessoa1 = new pessoa('Luiz', 23, 'masculino');  //Argumentos passados
+const pessoa3 = new pessoa('Henrique', 25, 'masculino'); 
+
+console.log(pessoa1.idade);
+console.log(pessoa3.nome);  
 
 
 
