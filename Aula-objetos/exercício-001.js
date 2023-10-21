@@ -157,5 +157,44 @@ outrapessoa1.alerta = function(){
 }
 
 outrapessoa1.alerta(); //Olá
-outraPessoa2.alerta(); // Erro! outraPessoa2 não possui método. 
+outraPessoa2; // Erro! outraPessoa2 não possui método. 
 
+//Contrutores integrados em JavaScript. 
+
+let a = new Object(); // Um novo objeto
+let b = new String(); // Um novo objeto
+let c = new Number(); // Um novo objeto
+let d = new Boolean(); // Um novo objeto
+
+//exemplos: 
+
+const nome = new String('Luiz'); 
+console.log(nome); // Luiz
+
+const numero = new Number(55);
+console.log(numero); // 55
+
+const contar = new Boolean(true);
+console.log(contar); // true
+
+
+//Recomenda-se usar tipos de dados primitivos e cria-los de forma normal, como: 
+
+const nome2 = 'Luiz'; const numero2 = 55; const contar2 = true; 
+//Não se deve declarar strings, numeros e booleanos como objetos porque eles se tornam mais lentos.
+
+
+// Getters e setters são dois tipos de propriedades de objto. 
+//Propriedade de dados e propriedades de acessador. 
+
+//Os métods getters são usados para acessar as propriedades de um objeto. Exemplo: 
+
+const aqueleAluno = {
+    nome: 'Luiz', //propriedade de dados.
+    get getNome(){
+        return this.nome; // propriedade de acessador(getter)
+    }
+}
+console.log(aqueleAluno.nome); //Acessando propriedade de dados. 
+console.log(aqueleAluno.getNome); //Acessando métodos getter. 
+// console.log(aqueleAluno.getNome()); Erro! Está tentando acessar como método.
