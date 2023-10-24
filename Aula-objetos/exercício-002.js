@@ -6,19 +6,18 @@ class pessoa {
         this.idade = idade
         this.profissão = profissão
     }
+
+    info(){
+        console.log(`Nome.: ${this.nome}.`);
+        console.log(`Idade.: ${this.idade}`);
+        console.log(`Profissão.: ${this.profissão}`);
+        console.log('===============================');
+    }
 }
-const médico1 = new pessoa('Luiz', 30, 'cardiologista');
-const médico2 = new pessoa('Henrique', 25, 'Pediatra');
 
-const medicos = [médico1, médico2]
+let pessoa1 = new pessoa('Luiz', 30, 'Biólogo');
+let pessoa2 = new pessoa('Henrique', 25, 'Professor');
+let pessoa3 = new pessoa('Linhares', 22, 'Vagabundo');
 
-console.log(medicos);
-
-let nomeMedico = entrada.question('Digite o nome do médico: ');
-let idadeMedico = entrada.question('Digite a idade do médico: ');
-let profissaoMedico = entrada.question('Digite a profissão do médico: ');
-const medico = new pessoa(nomeMedico, idadeMedico, profissaoMedico);
-medicos.push(medico)
-
-console.log(medicos);
+pessoa1.info()
 
