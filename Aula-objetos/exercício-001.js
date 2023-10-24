@@ -211,3 +211,7 @@ const outroAluno = {
 outroAluno.setNome = 'Henrique'; //Acessando propriedade de dados. 
 
 console.log(outroAluno.nome); //
+
+const todosAlunos = [aqueleAluno, outroAluno, aluno, alunos]; 
+
+console.log(todosAlunos);
