@@ -49,11 +49,18 @@ Sintaxe de objeto:
         horário: ' a partir das 08:00 horas.',
         getNome:function(){
             return this.nome
-        }
+        },
+        setNome: function(nome){
+            this.nome = nome
+        },
     }
     console.log('O nome do professor é: ' + professor.nome);
     console.log('O professor ' + professor.nome + ' ensina ' + professor['materia'] + professor['horário']);
-    professor.getNome()
+    
+    console.log(professor.getNome());
+    
+    let mudar = professor.setNome('Linhares');
+    console.log(professor.nome);
 
 // Um objeto também pode conter outro objeto. Exemplo: 
 
