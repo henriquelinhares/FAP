@@ -46,10 +46,14 @@ Sintaxe de objeto:
     const professor = {
         nome: 'Henrique',
         materia: 'Biologia',
-        horário: ' a partir das 08:00 horas.'
+        horário: ' a partir das 08:00 horas.',
+        getNome:function(){
+            return this.nome
+        }
     }
     console.log('O nome do professor é: ' + professor.nome);
     console.log('O professor ' + professor.nome + ' ensina ' + professor['materia'] + professor['horário']);
+    professor.getNome()
 
 // Um objeto também pode conter outro objeto. Exemplo: 
 
