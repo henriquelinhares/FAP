@@ -15,6 +15,9 @@ class carro {
         console.log('Ano do carro: ' + this.ano  );
         console.log('Velocidade do carro: ' + this.velocidade);
     }
+    static totalCarros(){
+        return 'O total de carros é: ' + this.modelo //rever isso aqui
+    }
 } 
 
 const carros = []
