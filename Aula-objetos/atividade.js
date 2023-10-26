@@ -26,6 +26,9 @@ class carroEsportivo extends carro {
     acelerar = function(){
         this.velocidade = this.velocidade + 20
     }
+    desacelerar = function(){
+        this.velocidade = this.velocidade - 10
+    }
 }
 
 const c1 = new carro('Peugeot', '206', 2005, 140);
@@ -44,4 +47,6 @@ const c3 = new carroEsportivo('Peugeot', '208 GT', 2012, 200);
 carros.push(c3)
 console.log(carros);
 c3.acelerar()
-console.log(carros);
+console.log(c3);
+c3.desacelerar()
+console.log(c3);
