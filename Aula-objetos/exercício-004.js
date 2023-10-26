@@ -1,5 +1,6 @@
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects
+//https://edrodrigues.com.br/blog/metodos-estaticos-e-propriedades-em-classes-javascript/
 
 //Métodos estáticos 
 
