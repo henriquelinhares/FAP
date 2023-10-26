@@ -1,4 +1,5 @@
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects
 
 //Métodos estáticos 
 
